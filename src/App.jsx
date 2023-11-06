@@ -10,10 +10,12 @@ import { useState } from 'react';
 import fetchData from './services/fetchData';
 import Loader from './components/Loader/Loader';
 import TextField from '@mui/material/TextField';
+import ModalNoResults from './components/ModalNoResults/ModalNoResults';
 
 function App() {
   const [pokemons, setPokemons] = useState(null);
   const [filterdPokemons, setFilteredPokemons] = useState(null);
+  const [noResults, setNoResults] = useState(false);
 
   React.useEffect(() => {
     const getPokemons = async () => {
@@ -39,6 +41,7 @@ function App() {
     const filter = pokemons.filter((pokemon) =>
       pokemon.name.includes(e.target.value.toLowerCase())
     );
+    filter.length === 0 ? setNoResults(true) : setNoResults(false);
     setFilteredPokemons(filter);
   };
 
@@ -168,6 +171,7 @@ function App() {
               />
             </div>
           </nav>
+          {noResults && <ModalNoResults />}
 
           <div className="grid-container">
             <ul>

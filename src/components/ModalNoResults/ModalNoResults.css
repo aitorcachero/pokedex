@@ -1,0 +1,28 @@
+.modal-noresult-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-noresult {
+  margin-top: 10rem;
+  width: 400px;
+  height: 100px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  border: 1px solid #646cff;
+  background-color: #ffffff;
+}
+
+.no-results {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
