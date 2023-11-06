@@ -1,0 +1,92 @@
+article {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  border: 1px solid #646cff;
+  background-color: #646cff;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+article:hover {
+  /* background-color: #646cff; */
+  border: 1px greenyellow solid;
+  transition: all 1s;
+}
+
+article:hover > img {
+  width: 300px;
+  height: 300px;
+  transition: 1s;
+}
+
+article:hover > p {
+  font-size: 20px;
+
+  transition: 1s;
+}
+
+.img-pokecard {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+h2 {
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  border: 1px solid #646cff;
+  background-color: #646cff;
+  transition: all 1s;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.big-img {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left: -500px;
+}
