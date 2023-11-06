@@ -11,6 +11,7 @@ article {
   background-color: #646cff;
   transition: all 1s;
   overflow: hidden;
+  cursor: pointer;
 }
 
 article:hover {
