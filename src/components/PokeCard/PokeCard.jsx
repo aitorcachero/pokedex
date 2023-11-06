@@ -2,7 +2,6 @@ import './PokeCard.css';
 import { useState } from 'react';
 
 export default function PokeCard({ src, name, type, id, other, peso }) {
-  console.log(other);
   const [modal, setModal] = useState(false);
 
   const openModal = () => {
@@ -44,8 +43,6 @@ export default function PokeCard({ src, name, type, id, other, peso }) {
     normal: 'Normal',
   };
 
-  console.log(colors[type]);
-
   return (
     <>
       <article
@@ -54,7 +51,7 @@ export default function PokeCard({ src, name, type, id, other, peso }) {
         }}
         onClick={openModal}
       >
-        <img src={src} alt="Imagen del pokemon" />
+        <img src={src} alt="Imagen del pokemon" className="img-pokecard" />
         <p>ID: #{id}</p>
         <h2>{name}</h2>
         <p>Tipo: {types[type]}</p>
